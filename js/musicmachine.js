@@ -63,6 +63,24 @@ $(document).ready(function () {
     $("#recordButton").click(toggleRecording);
     $("#clearButton").click(clearRecording);
 
+    //assign functions to my songs
+    $("#songOneButton").click(playSongOne);
+    $("#songTwoButton").click(playSongTwo);
+
+    function playSongOne() {
+        var songOne = ["A,3", "F,5", "G,4", "B,4", "A,5"];
+        playRecording(songOne);
+    }
+    function playSongTwo() {
+        var songTwo = ["E,5", "D,5", "C,5",
+            "E,5", "D,5", "C,5",
+            "C,5", "C,5", "C,5", "C,5",
+            "D,5","D,5", "D,5","D,5",
+            "E,5", "E,5", "E,5", "E,5",
+            "F,5",
+            "E,5", "D,5", "C,5"];
+        playRecording(songTwo);
+    }
 
     function clearRecording() {
         // create a new, empty array
